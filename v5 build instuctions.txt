@@ -1,0 +1,81 @@
+
+Create Site Columns
+
+AwareNotificationGroup	Multiple lines of text	  - *DoD only
+GroupComments	Multiple lines of text	**
+Published Author	Single line of text	
+ReqType	Single line of text	
+Request Due Date	Date and Time	
+SubCycle	Single line of text	
+zHistory	Multiple lines of text	**
+zLogHistory	Multiple lines of text	**
+zParent	Single line of text	
+zRequest	Multiple lines of text	 **
+zWorkflowInstructions	Multiple lines of text **
+FullDeliveryDate	Date and Time
+RequestStatus   Single line of text     Default = Newly Created
+AuditorPOC Single line of text
+RequestDescription Multiple lines of text	**
+
+ARCComments	Multiple lines of text
+IsThisPHI    Choice  Yes No
+IsThisPII    Choice  Yes No
+zDocAction   Choice  - ReadyForAuditor Reject Delete
+PublishedAuthor	Single line of text
+zInitialGroup	Single line of text
+zDeliveryTracker	Single line of text
+zCurrentOwner	Single line of text
+
+
+**Multiple lines of text  v5 group ; Allow unlimited Length in document libraries : yes ; Plain text
+ARCRequestv5 set v5Document as only content type allowed
+
+Create Content Types
+
+Parent : ARCRequestv5
+PBCv5
+SAMv5
+NFRv5
+OBSv5
+Parent : Document
+v5Document
+
+Supporting List
+ErrorLogs : Custom List
+	error  Multiple lines of text
+	comment Multiple lines of text
+	
+ImportBackUp : Document Library
+	Create Folder titled "IMPORT"
+	
+PBCLog : Custom List	
+	Body  :  Multiple lines of text
+SAMLog : Custom List	
+	Body  :  Multiple lines of text
+NFRLog : Custom List	
+	Body  :  Multiple lines of text
+OBSLog : Custom List	
+	Body  :  Multiple lines of text
+AuditorUploadTracker :  Custom List
+	Header : Single line of text	
+	Notify : Single line of text
+	Body   : Multiple line of text
+	
+	
+Request Library
+ 
+PBC01...PBC05
+SAM01...SAM05
+NFR01...NFR05
+OBS01...OBS05
+
+
+Site Pages
+CEWP : /html/navigationContainerForLandingPage.html
+CEWP : /html/landingpage.html
+
+Workflow
+
+v5RequestNotificationAndPermissions
+
+
